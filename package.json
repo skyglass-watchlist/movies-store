@@ -15,7 +15,7 @@
     "nodejs",
     "store"
   ],
-  "author": "Mohamed Labouardy",
+  "author": "Skyglass Watchlist",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",

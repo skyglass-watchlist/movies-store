@@ -2,7 +2,7 @@ FROM node:14.17.0
 
 WORKDIR /app
 
-COPY package-lock.json package.json .
+COPY package-lock.json package.json ./
 
 RUN npm i
 
