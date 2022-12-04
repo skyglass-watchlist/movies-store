@@ -1,5 +1,5 @@
 def imageName = 'skyglass/movies-store'
-def registry = 'https://registry.slowcoder.com'
+def registry = 'https://registry.hub.docker.com'
 
 node('workers'){
     stage('Checkout'){
