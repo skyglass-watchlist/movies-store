@@ -43,6 +43,19 @@ node('workers'){
             }
         }
     }
+
+    stage('Deploy'){
+        if(env.BRANCH_NAME == 'develop' || env.BRANCH_NAME == 'preprod'){
+            build job: "watchlist-deployment/${env.BRANCH_NAME}"
+        }
+
+        if(env.BRANCH_NAME == 'master'){
+            timeout(time: 2, unit: "HOURS") {
+                input message: "Approve Deploy?", ok: "Yes"
+            }
+            build job: "watchlist-deployment/master"
+        }
+    }    
 }
 
 def commitID() {
